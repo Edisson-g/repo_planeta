@@ -40,3 +40,13 @@ syncManager.readSet = new Set(respaldo);
 localStorage.setItem('readStars', JSON.stringify(respaldo));
 syncManager.saveToJSONBin().then(() => location.reload());
 ```
+__Para tu caso específico (5 estrellas):__
+```js
+// Ver qué estrellas tienes abiertas
+console.log('Estrellas abiertas:', [...syncManager.readSet]);
+
+// Reiniciar TODO (todas las estrellas)
+syncManager.readSet.clear();
+localStorage.setItem('readStars', JSON.stringify([]));
+syncManager.saveToJSONBin().then(() => location.reload());
+```
