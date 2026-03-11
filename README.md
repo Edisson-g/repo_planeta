@@ -1,4 +1,30 @@
 # REPO_planeta
+
+__CONFIGURACIÓN NECESARIA__
+```js
+const JSONBIN_CONFIG = {
+  API_KEY: 'tu_api_key',           // De JSONBin.io
+  BIN_ID: 'id_del_bin',            // ID único del bin
+  MASTER_KEY: 'tu_master_key',     // Clave principal
+  URL: 'https://api.jsonbin.io/v3'
+};
+```
+__DEPENDENCIAS EXTERNAS__
+```html
+<!-- Three.js para gráficos 3D -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<!-- Fuentes de Google -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Pinyon+Script" rel="stylesheet">
+```
+__Para añadir nuevas estrellas:__
+```js
+const MENSAJES = [
+  // ... mensajes existentes
+  { fecha: new Date('2026-06-15'), texto: 'Nuevo mensaje', color: {h:0.40, s:0.90, l:0.70} }
+];
+```
+
 __Para reiniciar TODO el progreso (todas las estrellas):__
 ```js
 // ⚠️ ESTO BORRA TODAS LAS ESTRELLAS ABIERTAS
