@@ -26,3 +26,16 @@ __Para ver qué estrellas tienes abiertas antes de reiniciar:__
 // Ver estrellas actuales
 console.log('Estrellas abiertas AHORA:', [...syncManager.readSet]);
 ```
+___Si quieres hacer una copia de seguridad antes:__
+```js
+// GUARDAR RESPALDO
+const respaldo = [...syncManager.readSet];
+console.log('📦 Respaldo guardado:', respaldo);
+
+// (aquí ejecutas el código de reinicio)
+
+// Si te arrepientes, RESTAURAR:
+syncManager.readSet = new Set(respaldo);
+localStorage.setItem('readStars', JSON.stringify(respaldo));
+syncManager.saveToJSONBin().then(() => location.reload());
+```
